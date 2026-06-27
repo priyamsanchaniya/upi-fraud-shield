@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { getNotifications, markRead, clearNotifications } from '../api';
 
 const Notifications = ({ userId }) => {
   const [notifs, setNotifs] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const fetchNotifs = () => {
+  const fetchNotifs = useCallback(() => {
     if (userId) {
       getNotifications(userId)
         .then(res => setNotifs(res.data))
         .catch(() => {})
         .finally(() => setLoading(false));
     }
-  };
+  }, [userId]);
 
-  useEffect(() => { fetchNotifs(); }, [userId]);
+  useEffect(() => { fetchNotifs(); }, [fetchNotifs]);
 
   const handleMarkRead = async (id) => {
     await markRead(id);
