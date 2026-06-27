@@ -1,11 +1,10 @@
 import psycopg2
-from psycopg2.extras import RealDictCursor
 
 DB_CONFIG = {
-    "host": "db.dnclgwpfrergsdinlmmy.supabase.co",
+    "host": "aws-0-ap-southeast-1.pooler.supabase.com",
     "database": "postgres",
-    "user": "postgres",
-    "password": "priyam0708200",
+    "user": "postgres.dnclgwpfrergsdinlmmy",
+    "password": "તારો Supabase password",
     "port": "5432"
 }
 
