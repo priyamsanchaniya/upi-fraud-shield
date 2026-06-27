@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect, useCallback } from 'react';
 import { getNotifications, markRead, clearNotifications } from '../api';
 
@@ -14,7 +15,9 @@ const Notifications = ({ userId }) => {
     }
   }, [userId]);
 
-  useEffect(() => { fetchNotifs(); }, [fetchNotifs]);
+  useEffect(() => {
+    fetchNotifs();
+  }, [fetchNotifs]);
 
   const handleMarkRead = async (id) => {
     await markRead(id);
