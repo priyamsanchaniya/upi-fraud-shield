@@ -1,10 +1,10 @@
 import psycopg2
 
 DB_CONFIG = {
-    "host": "aws-0-ap-southeast-1.pooler.supabase.com",
+    "host": "aws-1-ap-northeast-2.pooler.supabase.com",
     "database": "postgres",
     "user": "postgres.dnclgwpfrergsdinlmmy",
-    "password": "તારો Supabase password",
+    "password": "priyam0708200",
     "port": "5432"
 }
 
