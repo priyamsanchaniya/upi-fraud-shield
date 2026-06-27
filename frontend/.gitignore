@@ -21,3 +21,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+ry again.
+At line:5 char:1
++ .env
++ ~~~~
+    + CategoryInfo          : ObjectNotFound: (.env:String) [], Comman 
+   dNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
